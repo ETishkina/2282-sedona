@@ -19,43 +19,39 @@
       </nav>
     </header>
     <main>
-      <form class="filter">
-        <div class="Infrastructure">
-          <p>Инфраструктура:</p>
-          <input type="checkbox" id="swimmingpool">
-          <label for="swimmingpool">Бассейн</label><br>
-          <input type="checkbox"  id="parking">
-          <label for="parking">Парковка</label><br>
-          <input type="checkbox" id="wifi">
-          <label for="wifi">wi-fi</label><br>
-        </div>
-        <div class="type">
-          <p>Тип жилья:</p>
-          <input type="checkbox" id="hotel" >
-          <label for="hotel">Гостиница</label><br>
-          <input type="checkbox" id="motel">
-          <label for="motel">Мотель</label><br>
-          <input type="checkbox" id="apartments" value="wi-fi">
-          <label for="apartments">Апартаменты</label><br>
-        </div>
-        <div class="range-price">
-          <p>Стоимость в сутки(Р):</p>
-          <div class="min-price">
-            от 0
+      <aside>
+        <form class="filter-form">
+          <div class="infrastructure filter">
+            <p>Инфраструктура:</p>
+            <label><input type="checkbox">Бассейн</label>
+            <label><input type="checkbox">Парковка</label>
+            <label><input type="checkbox">wi-fi</label>
           </div>
-          <div class="max-price">
-            до 3000
+          <div class="type filter">
+            <p>Тип жилья:</p>
+            <label><input type="checkbox">Гостиница</label>
+            <label><input type="checkbox">Мотель</label>
+            <label><input type="checkbox">Апартаменты</label>
           </div>
-          <input type="range"><br>
-          <button type="submit">Показать</button>
-        </div>
-      </form>
+          <div class="range-price">
+            <p>Стоимость в сутки(Р):</p>
+            <input type="number" min="0" max="4000" placeholder="от 0">
+            <input type="number" min="1" max="4000" placeholder="до 3000">
+            <input type="range">
+            <button type="submit">Показать</button>
+          </div>
+        </form>
+      </aside>
       <div class="sorting">
         <p>Найдено:3</p>
         <p>Сортировка:</p>
-        <a href="#">по цене</a>
-        <a href="#">по типу</a>
-        <a href="#">по рейтингу</a>
+        <button type="button" class="active">по цене</button>
+        <button type="button">по типу</button>
+        <button type="button">по рейтингу</button>
+        <div class="sorting-max active">
+        </div>
+        <div class="sorting-min">
+        </div>
       </div>
       <article class="hotel">
         <div class="hotel-img">
@@ -68,7 +64,8 @@
           <a href="#">Забронировать</a>
         </div>
         <div class="rating">
-          <img src="http://placehold.it/150x100" width="150" height="100" alt="звезды рейтинга">
+          <div class="raying-star">
+          </div>
           <p>Рейтинг 8,5<p>
         </div>
       </article>
@@ -83,7 +80,8 @@
           <a href="#">Забронировать</a>
         </div>
         <div class="rating">
-          <img src="http://placehold.it/150x100" width="150" height="100" alt="звезды рейтинга">
+          <div class="raying-star">
+          </div>
           <p>Рейтинг 8,9<p>
         </div>
       </article>
@@ -98,7 +96,8 @@
           <a href="#">Забронировать</a>
         </div>
         <div class="rating">
-          <img src="http://placehold.it/150x100" width="150" height="100" alt="звезды рейтинга">
+          <div class="rating-star">
+          </div>
           <p>Рейтинг 9,2<p>
         </div>
       </article>
@@ -107,7 +106,7 @@
 
     <footer>
       <div class="footer-Hashtag">
-          <p>#visitsedona</p>
+          <p>#visitsedona</p>s
       </div>
       <div class="footer-social">
         <a class="social-btn social-btn-vk" href="#">Твиттер</a>
