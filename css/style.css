@@ -1,0 +1,19 @@
+body{
+  font-size: 0.875rem;
+  line-height: 1.857em;
+  color: #333333;
+  font-weight: 400;
+  font-family: "PT Sans", sans-serif;
+}
+h2.title{
+  color: #000000;
+  font-size: 21px;
+  line-height: 1,238em;
+  font-weight: 700;
+}
+h3{
+  font-size: 21px;
+  line-height: 1rem;
+  color: #000000;
+  font-weight: 700;
+}
