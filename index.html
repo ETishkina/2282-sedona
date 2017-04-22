@@ -25,64 +25,62 @@
           <img src="welcome-title.png" width="458" height="352" alt="приветствие">
         </div>
         <div class="description">
-          <h1 class="title"><span>Седона</span> — небольшой городок в <span>Аризоне</span>,<br>  заслуживающий большего! </h1>
+          <h1 class="title">Седона — небольшой городок в Аризоне,<br>  заслуживающий большего! </h1>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
-        <ul class="reasons">
-          <li class="reason">
-            <div class="reason-descripton">
-              <h2 class="title">Настоящий городок</h2>
-              <p>
-                №1
-              </p>
-              <p>
-                <span>Седона</span> — не аттракцион для туристов, там течет своя жизнь
-              </p>
-            </div>
-            <div class="reason-img">
-              <img src="img/reason1-img.jpg" width="800" height="256" alt="причина 1">
-            </div>
-          </li>
-          <li>
-            <ul class="features">
-              <li>
-                <h3 class="title">Жилье</h3>
-                <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-              </li>
-              <li>
-                <h3 class="title">Еда</h3>
-                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-              </li>
-              <li>
-                <h3 class="title">Сувениры</h3>
-                <p>Не только китайского, но и местного производства!</p>
-              </li>
-            </ul>
-          </li>
-          <li class="reason">
-            <div class="reason-img">
-              <img src="img/reason2-img.jpg" width="800" height="256" alt="причина 2">
-            </div>
-            <div class="reason-descripton">
-              <h2> class="title">Там есть<br> мост дьявола</h2>
-              <p>
-                №2
-              </p>
-              <p>
-                Да, по нему можно пройти! Если конечно<br> вы осмелитесь
-              </p>
-            </div>
-          </li>
-          <li class="other-reason">
-            <h2> class="title">Небольшая<br>площадь</h2>
+        <section class="reason">
+          <div class="reason-descripton">
+            <h2 class="title">Настоящий городок</h2>
+            <p>
+              №1
+            </p>
+            <p>
+              Седона — не аттракцион для туристов, там течет своя жизнь
+            </p>
+          </div>
+          <div class="reason-img">
+            <img src="img/reason1-img.jpg" width="800" height="256" alt="причина 1">
+          </div>
+        </section>
+        <section class="features">
+          <div class="features-item">
+           <h3 class="title">Жилье</h3>
+            <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+          </div>
+          <div class="features-item">
+            <h3 class="title">Еда</h3>
+            <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          </div>
+          <div class="features-item">
+            <h3 class="title">Сувениры</h3>
+            <p>Не только китайского, но и местного производства!</p>
+          </div>
+        </section>
+        <section class="reason">
+          <div class="reason-img">
+            <img src="img/reason2-img.jpg" width="800" height="256" alt="причина 2">
+          </div>
+          <div class="reason-descripton">
+            <h2> class="title">Там есть<br> мост дьявола</h2>
+            <p>
+              №2
+            </p>
+            <p>
+              Да, по нему можно пройти! Если конечно<br> вы осмелитесь
+            </p>
+          </div>
+        </section>
+        <section class="other-reason">
+          <div>
+          <h2> class="title">Небольшая<br>площадь</h2>
             <p>
               №3
             </p>
             <p>
               Все достопримечательности<br> находятся очень близко
             </p>
-          </li>
-          <li class="other-reason">
+          </div>
+          <div>
             <h2 class="title">Красивая<br>дорога</h2>
             <p>
               №4
@@ -90,8 +88,8 @@
             <p>
               Ехать в Седону из Лас-Вегаса совсем<br> не скучно!
             </p>
-          </li>
-          <li class="other-reason">
+          </div>
+          <div>
             <h2 class="title">Мало<br>туристов</h2>
             <p>
               №5
@@ -99,19 +97,21 @@
             <p>
               Большинство едет в гранд каньон и<br>толпиться там
             </p>
-          </li>
-        </ul>
+          </div>
+        </section>
         <div class="search-form">
           <p class="attention">Заинтересовались?</p>
           <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиницы в седоне</p>
-          <a class="search-btn" href="#">Поиск гостиницы в седоне</a>
-          <form class="popup-search-form">
-            <label>Дата заезда: <input type="date"></label><br>
-            <label>Дата выезда: <input type="date"></label><br>
-            <label>Взрослые: <input type="number" min="0" max="10"></label><br>
-            <label>Дети: <input type="number" min="0" max="10"></label><br>
-            <button type="submit">Найти</button>
-          </form>
+          <div class="popup-search">
+            <button type="button" class="popup-search-btn">Поиск гостиницы в седоне</button>
+            <form class="popup-search-form">
+              <label>Дата заезда: <input type="date"></label><br>
+              <label>Дата выезда: <input type="date"></label><br>
+              <label>Взрослые: <input type="number" min="0" max="10"></label><br>
+              <label>Дети: <input type="number" min="0" max="10"></label><br>
+              <button type="submit">Найти</button>
+            </form>
+          </div>
         </div>
         <div class="map">
         </div>
