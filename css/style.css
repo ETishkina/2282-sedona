@@ -680,17 +680,18 @@ color:rgba(255, 255, 255, 0.3);
   align-self: flex-end;
 
 }
-.rating-star-amara{
+.rating-star-four{
   width:80px;
-
 }
-.rating-star-desert{
+.rating-star-three{
   width:60px;
 }
-.rating-star-villas{
+.rating-star-two{
   width:40px;
 }
-
+.rating-star-one{
+  width:20px;
+}
 
 .footer{
   background-color: rgba(254, 254, 254, 0.9);
