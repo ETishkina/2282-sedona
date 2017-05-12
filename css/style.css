@@ -334,7 +334,7 @@ color:rgba(255, 255, 255, 0.3);
   justify-content: space-between;
  }
  .filter-title{
-    font-size: 1.143em;
+  font-size: 1.143em;
   line-height: 1.313rem;
   font-weight: 700;
   margin-bottom: 0;
@@ -376,6 +376,21 @@ color:rgba(255, 255, 255, 0.3);
 .filter input[type="checkbox"]:checked + label::after {
     content: "";
 }
+
+.filter input[type="checkbox"]:disabled + label{
+    content: "";
+    opacity:0.3;
+}
+.filter input[type="checkbox"]:disabled + label {
+    content: none;
+    opacity:0.3;
+}
+
+
+
+
+
+
 
 .range-price{
   width: 320px;
@@ -577,6 +592,13 @@ color:rgba(255, 255, 255, 0.3);
 .hotel-title{
   line-height:1.238em;
   margin:0 0 5px 0;
+  text-decoration: none;
+}
+.hotel-title:hover{
+  color: #81b3d2;
+}
+.hotel-title:active{
+  color: rgba(0, 0, 0, 0.3)
 }
 .hotel-description-price{
   line-height: 1.5em;
