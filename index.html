@@ -107,7 +107,7 @@
           <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиницы в седоне</p>
           <div class="popup-search">
             <button type="button" class="popup-search-btn">Поиск гостиницы в седоне</button>
-            <form class="popup-search-form">
+            <form class="popup-search-form" method="get" action="">
               <div class="form-row">
                 <label class="label" for="date-in">Дата заезда:</label>
                 <input type="text" class="date input" value="24 апреля 2017" id="date-in">
@@ -130,7 +130,6 @@
                   <button type="button" class="control control-minus"></button>
                   <input type="text" class="input quantity" value="0" id="child">
                   <button type="button" class="control control-plus"></button>
-
                 </div>
               </div>
                 <button type="submit" class="btn-blue popup-find-btn">Найти</button>
@@ -162,5 +161,6 @@
         </div>
     </footer>
   </div>
+  <script src="js/script.js"></script>
   </body>
 </html>

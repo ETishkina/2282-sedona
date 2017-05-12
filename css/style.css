@@ -172,7 +172,9 @@ body{
   border: none;
   outline: none;
 }
+
 .popup-search-form{
+  display: block;
   box-sizing: border-box;
   width:100%;
   position: absolute;
@@ -182,6 +184,12 @@ body{
   box-shadow: 0 7px 15px rgba(0, 0, 0, .15);
 
 }
+
+.popup-search-form-hide{
+  visibility: hidden;
+}
+
+
 .form-row{
   width:100%;
   display: flex;
@@ -334,33 +342,34 @@ color:rgba(255, 255, 255, 0.3);
   justify-content: space-between;
  }
  .filter-title{
-  font-size: 1.143em;
-  line-height: 1.313rem;
+  font-size: 1.143rem;
+  line-height: 1.313em;
   font-weight: 700;
   margin-bottom: 0;
  }
-.filter input[type="checkbox"] {
-    opacity: 0;
+.filter-checkbox-input {
+    position: absolute;
+    clip: rect(0 0 0 0);
 }
-.filter label{
+.filter-checkbox-label{
   position: relative;
   display: inline-block;
   padding-left: 40px;
 }
-.filter label::before,
-.filter label::after {
+.filter-checkbox-label::before,
+.filter-checkbox-label::after {
     position: absolute;
     content: "";
     display: inline-block;
 }
-.filter label::before{
+.filter-checkbox-label::before{
     height: 18px;
     width: 18px;
     border: 2px solid #fff;
     border-radius: 4px;
     left: 0px;
 }
-.filter label::after {
+.filter-checkbox-label::after {
     height: 6px;
     width: 14px;
     border-left: 5px solid #fff;
@@ -369,28 +378,21 @@ color:rgba(255, 255, 255, 0.3);
     left: 4px;
     top: 2px;
 }
-.filter input[type="checkbox"] + label::after {
+.filter-checkbox-input + .filter-checkbox-label::after {
     content: none;
 }
 
-.filter input[type="checkbox"]:checked + label::after {
+.filter-checkbox-input:checked + .filter-checkbox-label::after {
     content: "";
 }
-
-.filter input[type="checkbox"]:disabled + label{
+.filter-checkbox-input:disabled:checked + .filter-checkbox-label::after{
     content: "";
     opacity:0.3;
 }
-.filter input[type="checkbox"]:disabled + label {
-    content: none;
+.filter-checkbox-input:disabled + .filter-checkbox-label::before{
+    content: "";
     opacity:0.3;
 }
-
-
-
-
-
-
 
 .range-price{
   width: 320px;
@@ -439,6 +441,9 @@ color:rgba(255, 255, 255, 0.3);
   font: inherit;
   background: none;
   border: none;
+  outline: none;
+  line-height: normal;
+
 }
 .range-controls {
   position: relative;
@@ -515,6 +520,8 @@ color:rgba(255, 255, 255, 0.3);
 .sorting-btn-title{
   font-size:0.75rem;
   line-height: 1.5em;
+
+
 }
 .sorting-btn{
   background-color: transparent;
@@ -522,6 +529,10 @@ color:rgba(255, 255, 255, 0.3);
   border:none;
   color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  font-size:0.75rem;
+  line-height: 1.5em;
+
 }
 .sorting-btn:hover{
   color: #81b3d2;
@@ -550,45 +561,65 @@ color:rgba(255, 255, 255, 0.3);
   align-items: center;
 }
 .sorting-btn-up-down{
-  background-color: transparent;
   padding: 0;
+  border: none;
+  background: none;
+  position: relative;
+  width:20px;
+  height:20px;
 }
 .sorting-btn-up-down:focus{
   outline: none;
 }
-.sorting-btn-down{
-  margin-top: 20px;
-  border: 11px solid transparent;
-  border-top: 11px solid #cdcdcd;
+.sorting-btn-up:after{
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 11px solid #808080;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
-.sorting-btn-down:hover{
-  border-top: 11px solid #000;
+.sorting-btn-up:hover:after {
+  border-bottom-color: #000;
 }
-.sorting-btn-down:active,
-.sorting-btn-down:focus{
-  border-top: 11px solid #81b3d2;
+.sorting-btn-up:active:after{
+  border-bottom-color: #82b4d3;
+  outline: none;
 }
-.sorting-btn-up{
-  height: 10px;
-  border: 11px solid transparent;
-  border-bottom: 11px solid #cdcdcd;
+.sorting-btn-down:after{
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 11px solid #808080;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
-.sorting-btn-up:hover{
-  border-bottom: 11px solid #000;
-}
-.sorting-btn-up:active,
-.sorting-btn-up:focus{
-  border-bottom: 11px solid #81b3d2;
+.sorting-btn-up-down:active:after {
+  border-top-color: #82b4d3;
+   outline: none;
 }
 
 .hotel{
   border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
-  border-collapse: collapse;
+
   padding: 25px 73px;
   display: flex;
   text-align: left;
 }
+.hotel:last-child{
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .hotel-title{
   line-height:1.238em;
   margin:0 0 5px 0;
@@ -602,7 +633,7 @@ color:rgba(255, 255, 255, 0.3);
 }
 .hotel-description-price{
   line-height: 1.5em;
-  margin:0 0 15px 0;
+  margin:0 0 18px 0;
 }
 .hotel-img{
   width:135px;
@@ -642,20 +673,22 @@ color:rgba(255, 255, 255, 0.3);
   margin:0;
 }
 .rating-star{
-  min-width:105px;
+  width:90px;
   height:17px;
-  background-image: url(../img/rating-star.png);
-  background-repeat: no-repeat;
+  background-image: url(../img/icon-star.png);
+  background-repeat: space;
+  align-self: flex-end;
 
 }
 .rating-star-amara{
-  background-position: 100% 0;
+  width:80px;
+
 }
 .rating-star-desert{
-  background-position: 230% 0;
+  width:60px;
 }
 .rating-star-villas{
-  background-position: 370% 0;
+  width:40px;
 }
 
 
