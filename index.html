@@ -15,11 +15,10 @@
             <img src="img/logomain.png" width="138" height="70" alt="City of Sedona">
           </div>
           <ul class="menu">
-            <li class="menu-item"><a href="#">Информация</a></li>
-            <li class="menu-item"><a href="#">Фото и видео</a></li>
-            <li class="menu-item menu-item-empty"></li>
-            <li class="menu-item"><a href="#">Карта штата</a></li>
-            <li class="menu-item"><a href="hotels.html">Гостиницы</a></li>
+            <li class="menu-item menu-item-left"><a href="#">Информация</a></li>
+            <li class="menu-item menu-item-left"><a href="#">Фото и видео</a></li>
+            <li class="menu-item menu-item-right"><a href="hotels.html">Гостиницы</a></li>
+            <li class="menu-item menu-item-right"><a href="#">Карта штата</a></li>
           </ul>
         </nav>
       </header>
@@ -28,7 +27,7 @@
           <img src="img/welcome-title.png" width="458" height="352" alt="Welcome to the gorgeous Sedona 'Because the Grand Canyon sucks!'" class="promo-img-title">
         </div>
         <div class="description">
-          <h1 class="intro-title">Седона — небольшой городок в Аризоне,<br>  заслуживающий большего! </h1>
+          <h1 class="intro-title">Седона — небольшой городок в Аризоне, заслуживающий большего! </h1>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
         <section class="reason">
@@ -46,16 +45,16 @@
           </div>
         </section>
         <section class="features">
-          <div class="features-item">
-           <h3 class="title features-item-title features-icon features-icon-house">Жилье</h3>
+          <div class="features-item features-icon features-icon-house">
+            <h3 class="title features-item-title">Жилье</h3>
             <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </div>
-          <div class="features-item">
-            <h3 class="title features-item-title features-icon features-icon-food">Еда</h3>
+          <div class="features-item features-icon features-icon-food">
+            <h3 class="title features-item-title ">Еда</h3>
             <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </div>
-          <div class="features-item">
-            <h3 class="title  features-item-title features-icon features-icon-souvenir">Сувениры</h3>
+          <div class="features-item features-icon features-icon-souvenir">
+            <h3 class="title  features-item-title ">Сувениры</h3>
             <p>Не только китайского, но и местного производства!</p>
           </div>
         </section>
@@ -75,30 +74,30 @@
         </section>
         <section class="other-reasons">
           <div class="other-reason">
-          <h2 class="title">Небольшая<br>площадь</h2>
+          <h2 class="title other-reason-title">Небольшая площадь</h2>
             <p>
               - №3 -
             </p>
             <p>
-              Все достопримечательности<br> находятся очень близко
+              Все достопримечательности находятся очень близко
             </p>
           </div>
           <div class="other-reason">
-            <h2 class="title">Красивая<br>дорога</h2>
+            <h2 class="title other-reason-title">Красивая дорога</h2>
             <p>
               - №4 -
             </p>
             <p>
-              Ехать в Седону из Лас-Вегаса совсем<br> не скучно!
+              Ехать в Седону из Лас-Вегаса совсем не скучно!
             </p>
           </div>
           <div class="other-reason">
-            <h2 class="title">Мало<br>туристов</h2>
+            <h2 class="title other-reason-title">Мало туристов</h2>
             <p>
               - №5 -
             </p>
             <p>
-              Большинство едет в гранд каньон и<br>толпиться там
+              Большинство едет в гранд каньон и< толпиться там
             </p>
           </div>
         </section>
@@ -120,16 +119,20 @@
               </div>
               <div class="form-row form-row-last">
                 <div class="quantity-adult">
-                 <label class="label form-adult" for="adult">Взрослые:</label>
-                  <button type="button" class="control control-minus"></button>
-                  <input type="text"  class="input quantity" value="2" id="adult">
-                  <button type="button" class="control control-plus"></button>
+                  <label class="label form-adult" for="adult">Взрослые:</label>
+                  <div class="container-adult">
+                    <button type="button" class="control control-minus"></button>
+                    <input type="text"  class="input quantity" value="2" id="adult">
+                    <button type="button" class="control control-plus"></button>
+                  </div>
                 </div>
                 <div class="quantity-child">
                   <label class=" label form-child" for="child">Дети:</label>
-                  <button type="button" class="control control-minus"></button>
-                  <input type="text" class="input quantity" value="0" id="child">
-                  <button type="button" class="control control-plus"></button>
+                  <div class="container-child">
+                    <button type="button" class="control control-minus"></button>
+                    <input type="text" class="input quantity" value="0" id="child">
+                    <button type="button" class="control control-plus"></button>
+                  </div>
                 </div>
               </div>
                 <button type="submit" class="btn-blue popup-find-btn">Найти</button>
@@ -159,8 +162,8 @@
           <span>Website by</span>
             <a  href="https://htmlacademy.ru/intensive/htmlcss"></a>
         </div>
-    </footer>
-  </div>
+      </footer>
+    </div>
   <script src="js/script.js"></script>
   </body>
 </html>
